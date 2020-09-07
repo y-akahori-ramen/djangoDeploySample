@@ -1,0 +1,28 @@
+version: '3'
+services:
+  webapp:
+    build: ./python
+    volumes:
+      - ../app:/home/app/
+      - django_statics:/home/static:rw
+    environment:
+      STATIC_ROOT: '/home/static'
+    entrypoint:
+      - /home/data/entrypoint.sh 
+  nginx:
+    image: nginx:1.19.2
+    ports:
+      - 80:8000
+    volumes:
+      - ./nginx/uwsgi:/home/uwsgi
+      - ./nginx/templates:/etc/nginx/templates
+      - django_statics:/home/static:ro
+    environment: 
+      LISTEN_PORT: 8000
+      UWSGI_IP: webapp:8001
+      SEVER_NAME: localhost
+      UWSGI_PARAMS_PATH: /home/uwsgi/uwsgi_params
+      STATIC_PATH: /home/static
+volumes:
+  django_statics:
+    driver: local
