@@ -5,7 +5,6 @@ COPY ./data/ /home/data
 
 # 必要なパッケージインストール
 RUN pip install --upgrade pip
-RUN pip install uwsgi
 RUN pip install -r /home/data/requirements.txt
 
 # コンテナ起動時に実行するスクリプトに権限が必要なため設定
