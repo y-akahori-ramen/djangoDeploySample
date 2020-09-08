@@ -8,5 +8,4 @@ python /home/app/sampleapp/manage.py makemigrations
 python /home/app/sampleapp/manage.py migrate
 
 # サーバー起動
-# python /home/app/sampleapp/manage.py runserver 0.0.0.0:8000
 uwsgi --ini /home/data/django_uwsgi.ini
