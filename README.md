@@ -41,6 +41,14 @@ infraフォルダで`docker-compose up`してください。
 STATIC_ROOT = os.getenv('STATIC_ROOT')
 ```
 
+## requirements.txtの場所
+
+`infra/python/data/requirements.txt`
+
+ローカルで開発を進める場合はvenv等で仮想環境を作り、上記のファイルで必要パッケージをインストールしてください。
+
+また、デプロイ時は上記のファイルを使ってパッケージインストールしています。追加で必要なパッケージがあればファイルを書き換えてください。
+
 
 ## 特に参考になったサイト
 - [Setting up Django and your web server with uWSGI and nginx](https://uwsgi.readthedocs.io/en/latest/tutorials/Django_and_nginx.html)
