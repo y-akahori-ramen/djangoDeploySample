@@ -27,7 +27,7 @@ infraフォルダで`docker-compose up`してください。
 - `python manage.py check --deploy` によるデプロイ検証への対処はいれていません。
 - ssl対応は入っていません。
 - データベースはSQLiteです。（startprojectで作成したまま）
-- シークレットキーがそのままgit煮上がっている
+- シークレットキーがそのままgitに上がっている
 
 等、本番で使用するには色々と問題があります。  
 あくまでサンプルです。
