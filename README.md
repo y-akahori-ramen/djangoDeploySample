@@ -49,6 +49,9 @@ STATIC_ROOT = os.getenv('STATIC_ROOT')
 
 また、デプロイ時は上記のファイルを使ってパッケージインストールしています。追加で必要なパッケージがあればファイルを書き換えてください。
 
+## データ永続化とバックアップ
+appフォルダをマウントしており、SQLiteを使用しているためホスト側の `app/sampleapp/db.sqlite3` にデータが保存されます。  
+バックアップはこのファイルをバックアップすることで出来ます。
 
 ## 特に参考になったサイト
 - [Setting up Django and your web server with uWSGI and nginx](https://uwsgi.readthedocs.io/en/latest/tutorials/Django_and_nginx.html)
