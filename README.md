@@ -14,7 +14,7 @@ infraフォルダで`docker-compose up`してください。
     - Djangoアプリケーション+uWSGI
     - webappコンテナに立てたuWSGIを介して、nginxコンテナ側と通信する。  
       ※uWSGIはnginxなどのWebサーバとDjango等のPython製Webアプリケーションとの通信を仲介する。  
-      nginx ←→ uWSGI ←→ Django　という通信のがなれとなっている。
+      nginx ←→ uWSGI ←→ Django　という通信の流れとなっている。
 - nginxコンテナ
     - webサーバ
     - Djangoアプリの静的コンテンツのホスティング
